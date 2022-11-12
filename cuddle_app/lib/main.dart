@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CuddleApp',
+      title: 'Cuddle App',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -96,12 +96,28 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'This is the Button for virtual Cuddles:',
+              'Cuddle App',
+              style: TextStyle(fontSize: 25),
             ),
+            SizedBox(height: 25),
+            const Text(
+              'This is the Button for virtual Cuddles:',
+              style: TextStyle(fontSize: 15),
+            ),
+            SizedBox(height: 17),
+            ElevatedButton(
+              child: const Text('Add Cuddle'),
+              onPressed: _incrementCounter,
+              // toolti
+              // p: 'Increment',
+              // child: const Icon(Icons.add),
+            ),
+            SizedBox(height: 10),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            SizedBox(height: 17),
             const Text(
               'Please print this off and bring it to your nearest representative',
             ),
@@ -110,8 +126,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        tooltip: 'Add Another Cuddle',
+        // child: const Icon(Icons.add),
+        child: const Text("Add Cuddle"),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
